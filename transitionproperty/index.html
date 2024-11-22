@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition Property</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section id="hero">
+      <div class="container">
+        <header>
+          <!-- nav sart -->
+          <div class="navbar">
+            <div class="logo"><a href="#">Transition Property</a></div>
+
+            <div class="menu">
+              <ul class="links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="toggle-btn">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+          </div>
+          <div class="dropdown-menu">
+            <ul class="links">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </header>
+
+        <!-- nav ends -->
+        <div class="hero-box">
+          <h1>Transition Property</h1>
+          <p>
+            Transition Property specialises in working with lettings agents,
+            private landlords and property investors to providing good quality
+            rooms to lets for working professional and international students in
+            London <br /><br />
+            The company was formed around property professionals, with a vision
+            of becoming a bespoke provider for short or long term lets with
+            custom-tailored services to our clients
+          </p>
+          <button class="hero-btn">
+            Read more <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Content Boxes -->
+    <section class="box-content">
+      <div class="container-2">
+        <div class="left-div">
+          <h2>Landlords</h2>
+          <ul>
+            <li>
+              Providing assured fixed monthly rent for up to 5 years, with no
+              voids or loss of income. No additional management fees or
+              commission to pay
+            </li>
+            <li>No more unexpected calls from tenants.</li>
+            <li>We take over the legal and administrative work for you.</li>
+            <li>Maintaining condition of property</li>
+            <li>Dedicated team of experienced property professionals</li>
+          </ul>
+        </div>
+        <div class="right-div"></div>
+      </div>
+      <!-- //////////////////// -->
+      <div class="container-2">
+        <div class="right-div-2"></div>
+        <div class="left-div">
+          <h2>Letting Agents</h2>
+          <ul>
+            <li>Assured fixed monthly rental income for up to 5 years.</li>
+            <li>Reduced time for arranging and attending viewings.</li>
+            <li>Your existing terms with landlords remain unaffected.</li>
+            <li>No late payments, eviction procedures and legal fees</li>
+            <li>A Dedicated Account Manager.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- //////////////////// -->
+
+      <div class="container-2">
+        <div class="left-div">
+          <h2>Tenants or International Student Lets</h2>
+          <ul>
+            <li>Professional service and care for each tenant.</li>
+            <li>
+              A variety of very good standard properties available and shared
+              with like-minded people
+            </li>
+            <li>Bills included in the rental price</li>
+            <li>
+              We cover prime Location in London. Our properties are within Zone
+              1 – 4
+            </li>
+            <li>
+              A consistent and friendly bespoke services tailored to individual
+              requirements (international Students)
+            </li>
+          </ul>
+        </div>
+        <div class="right-div-3"></div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">
+        <p>Transition Property © 2018 | Designed by BusinessWise</p>
+      </div>
+    </footer>
+    <script>
+      const toggleBtn = document.querySelector(".toggle-btn");
+      const toggleBtnicon = document.querySelector(".toggle-btn i");
+      const dropdownMenu = document.querySelector(".dropdown-menu");
+
+      toggleBtn.onclick = function () {
+        dropdownMenu.classList.toggle("open");
+        const isOpen = dropdownMenu.classList.contains("open");
+
+        toggleBtnicon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>
